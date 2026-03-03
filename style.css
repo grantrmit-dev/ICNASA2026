@@ -1,0 +1,231 @@
+/* ── ICNASA 2026 Shared Styles ── */
+:root {
+  --primary: #1a3a5c;
+  --accent: #2980b9;
+  --green: #27ae60;
+  --orange: #e67e22;
+  --footer-bg: #1a1a1a;
+  --light-bg: #f5f7fa;
+  --border: #dde3ea;
+  --text: #333;
+  --muted: #666;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; color: var(--text); font-size: 15px; line-height: 1.6; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; }
+
+/* ── Logo ── */
+.logo-bar {
+  display: flex; align-items: center; justify-content: center;
+  padding: 12px 20px; background: #fff; gap: 20px;
+}
+.logo-icnasa { display: flex; align-items: center; gap: 8px; }
+.logo-icnasa .dots { display: flex; gap: 3px; }
+.logo-icnasa .dot { width: 10px; height: 10px; border-radius: 50%; }
+.logo-icnasa .dot.d1 { background: #e74c3c; }
+.logo-icnasa .dot.d2 { background: #3498db; }
+.logo-icnasa .dot.d3 { background: #2ecc71; }
+.logo-icnasa .dot.d4 { background: #f39c12; }
+.logo-icnasa .dot.d5 { background: #9b59b6; }
+.logo-icnasa span { font-size: 1.4rem; font-weight: 700; color: var(--primary); letter-spacing: 1px; }
+.logo-divider { width: 1px; height: 40px; background: var(--border); }
+.logo-can span { font-size: 1.3rem; font-weight: 700; color: var(--primary); }
+.logo-can em { color: var(--accent); font-style: normal; }
+
+/* ── Navigation ── */
+nav { background: #fff; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.nav-inner { display: flex; justify-content: center; flex-wrap: wrap; gap: 0; }
+nav a { display: block; padding: 12px 14px; color: #333; font-size: 0.88rem; white-space: nowrap; position: relative; }
+nav a:hover { color: var(--accent); text-decoration: none; }
+nav a.active { color: var(--accent); border-bottom: 2px solid var(--accent); }
+.dropdown { position: relative; }
+.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #fff; min-width: 180px; box-shadow: 0 4px 12px rgba(0,0,0,.12); z-index: 100; border-top: 2px solid var(--accent); }
+.dropdown-menu a { padding: 10px 16px; font-size: 0.85rem; border-bottom: 1px solid #f0f0f0; }
+.dropdown:hover .dropdown-menu { display: block; }
+.nav-sub { text-align: center; padding: 6px 0; border-top: 1px solid var(--border); }
+.nav-sub a { font-size: 0.88rem; padding: 6px 14px; }
+
+/* ── Hero / Page header ── */
+.page-header { background: var(--light-bg); padding: 40px 20px; text-align: center; border-bottom: 1px solid var(--border); }
+.page-header h1 { font-size: 1.8rem; color: var(--primary); margin-bottom: 8px; }
+.page-header p { color: var(--muted); font-size: 0.95rem; }
+
+/* ── Container ── */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 40px 0; }
+.section + .section { border-top: 1px solid var(--border); }
+h2 { font-size: 1.5rem; color: var(--primary); margin-bottom: 20px; text-align: center; }
+h3 { font-size: 1.1rem; color: var(--primary); margin-bottom: 10px; }
+
+/* ── Buttons ── */
+.btn { display: inline-block; padding: 10px 22px; border-radius: 4px; font-size: 0.9rem; font-weight: 600; cursor: pointer; border: none; }
+.btn-dark { background: #1a1a1a; color: #fff; }
+.btn-dark:hover { background: #333; color: #fff; text-decoration: none; }
+.btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+.btn-outline:hover { background: var(--primary); color: #fff; text-decoration: none; }
+.btn-accent { background: var(--accent); color: #fff; }
+.btn-accent:hover { background: #1a6fa8; color: #fff; text-decoration: none; }
+
+/* ── Cards & grids ── */
+.card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 20px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+/* ── Themes ── */
+.themes-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.theme-item { background: var(--light-bg); border-left: 4px solid var(--accent); padding: 12px 16px; border-radius: 0 6px 6px 0; font-size: 0.9rem; }
+.theme-item strong { display: block; color: var(--primary); margin-bottom: 2px; }
+
+/* ── Dates table ── */
+.dates-table { width: 100%; border-collapse: collapse; }
+.dates-table tr:nth-child(even) { background: var(--light-bg); }
+.dates-table td { padding: 10px 16px; border-bottom: 1px solid var(--border); }
+.dates-table td:first-child { color: var(--muted); font-size: 0.88rem; width: 280px; }
+.dates-table td:last-child { font-weight: 600; color: var(--primary); }
+
+/* ── Fees table ── */
+.fees-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+.fees-table th { background: var(--primary); color: #fff; padding: 10px 16px; text-align: left; }
+.fees-table td { padding: 10px 16px; border-bottom: 1px solid var(--border); }
+.fees-table tr:nth-child(even) td { background: var(--light-bg); }
+.fees-table td:last-child { font-weight: 600; color: var(--accent); }
+
+/* ── Form ── */
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 5px; color: var(--text); }
+.form-group label .req { color: #e74c3c; }
+.form-control { width: 100%; padding: 9px 12px; border: 1px solid var(--border); border-radius: 4px; font-size: 0.9rem; }
+.form-control:focus { outline: none; border-color: var(--accent); }
+.radio-group { display: flex; flex-wrap: wrap; gap: 12px; }
+.radio-group label { display: flex; align-items: center; gap: 6px; font-weight: normal; font-size: 0.9rem; cursor: pointer; }
+
+/* ── Person card ── */
+.person-card { text-align: center; }
+.person-card .avatar { width: 90px; height: 90px; border-radius: 50%; background: var(--light-bg); margin: 0 auto 10px; overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--accent); border: 2px solid var(--border); }
+.person-card .avatar img { width: 100%; height: 100%; object-fit: cover; }
+.person-card h4 { font-size: 0.88rem; color: var(--primary); margin-bottom: 3px; }
+.person-card p { font-size: 0.78rem; color: var(--muted); }
+
+/* ── Sponsor logos ── */
+.sponsors-grid { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 32px; padding: 20px 0; }
+.sponsor-logo { padding: 12px 20px; border: 1px solid var(--border); border-radius: 6px; font-size: 1.1rem; font-weight: 700; color: var(--primary); text-align: center; min-width: 140px; }
+
+/* ── Hero banner ── */
+.hero { background: linear-gradient(135deg, #1a3a5c 0%, #2980b9 100%); color: #fff; padding: 60px 20px; text-align: center; }
+.hero h1 { font-size: 2.2rem; margin-bottom: 12px; }
+.hero p { font-size: 1.1rem; opacity: .9; margin-bottom: 8px; }
+.hero .date-badge { display: inline-block; background: rgba(255,255,255,.2); border-radius: 20px; padding: 6px 18px; margin: 8px 4px; font-size: 0.95rem; }
+.hero .actions { margin-top: 24px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+/* ── Co-organised by ── */
+.coorg { display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; padding: 20px 0; }
+.coorg-logo { font-size: 1rem; font-weight: 700; color: var(--primary); border: 2px solid var(--border); padding: 8px 20px; border-radius: 6px; }
+
+/* ── Accommodation ── */
+.accom-section { margin-bottom: 24px; }
+.accom-section h3 { background: var(--primary); color: #fff; padding: 8px 16px; border-radius: 4px; margin-bottom: 12px; font-size: 0.95rem; }
+.hotel-list { list-style: none; }
+.hotel-list li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+.hotel-list li strong { color: var(--primary); display: block; }
+
+/* ── Info box ── */
+.info-box { background: var(--light-bg); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 20px; font-size: 0.9rem; }
+.info-box ul { padding-left: 18px; margin-top: 8px; }
+.info-box li { margin-bottom: 6px; }
+
+/* ── Past conference ── */
+.highlight-box { background: var(--light-bg); border-radius: 8px; padding: 24px; margin-bottom: 24px; }
+.stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 20px 0; }
+.stat-card { background: #fff; border-radius: 8px; padding: 16px; text-align: center; border: 1px solid var(--border); }
+.stat-card .num { font-size: 2rem; font-weight: 700; color: var(--accent); }
+.stat-card .label { font-size: 0.8rem; color: var(--muted); }
+
+/* ── Map ── */
+.map-wrapper { border-radius: 8px; overflow: hidden; border: 1px solid var(--border); }
+.map-wrapper iframe { display: block; }
+
+/* ── Footer ── */
+footer { background: var(--footer-bg); color: #aaa; padding: 40px 20px 20px; margin-top: 60px; }
+.footer-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 40px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 6px 0; flex-direction: column; }
+.footer-links a { color: #ccc; font-size: 0.85rem; padding: 3px 0; }
+.footer-links a:hover { color: #fff; text-decoration: none; }
+.footer-social { display: flex; gap: 12px; margin-top: 16px; }
+.footer-social a { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; color: #fff; }
+.footer-social .li { background: #0077b5; }
+.footer-social .wc { background: #07c160; }
+.footer-copy { text-align: center; font-size: 0.78rem; color: #555; margin-top: 30px; padding-top: 16px; border-top: 1px solid #333; }
+
+/* ── Fee / general table ── */
+.fee-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+.fee-table th { background: var(--primary); color: #fff; padding: 10px 16px; text-align: left; font-size: 0.9rem; }
+.fee-table th small { font-weight: normal; opacity: .8; }
+.fee-table td { padding: 10px 16px; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+.fee-table tr:nth-child(even) td { background: var(--light-bg); }
+
+/* ── Abstract submission form ── */
+.submit-form { max-width: 800px; margin: 0 auto; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+  width: 100%; padding: 9px 12px; border: 1px solid var(--border);
+  border-radius: 4px; font-size: 0.9rem; font-family: inherit;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { outline: none; border-color: var(--accent); }
+.form-group textarea { resize: vertical; }
+
+/* ── Theme section (speakers / committee) ── */
+.theme-section { margin-bottom: 32px; }
+.theme-section h3 { background: var(--light-bg); border-left: 4px solid var(--accent); padding: 10px 16px; border-radius: 0 4px 4px 0; margin-bottom: 16px; }
+.theme-badge { display: inline-block; background: var(--accent); color: #fff; font-size: 0.75rem; padding: 3px 10px; border-radius: 20px; margin-top: 6px; }
+.affiliation { font-size: 0.78rem; color: var(--muted); }
+
+/* ── Program table ── */
+.program-table { width: 100%; border-collapse: collapse; margin-bottom: 8px; }
+.program-table td { padding: 9px 14px; border-bottom: 1px solid var(--border); font-size: 0.88rem; }
+.program-header-row td { background: var(--primary); color: #fff; font-size: 0.85rem; padding: 8px 14px; }
+.time { width: 160px; color: var(--accent); font-weight: 600; white-space: nowrap; }
+.prog-event { }
+.prog-room { width: 180px; color: var(--muted); font-size: 0.82rem; text-align: right; }
+
+/* ── Stats row (past conferences) ── */
+.stats-row { display: flex; gap: 16px; flex-wrap: wrap; margin: 16px 0; }
+.stat-item { flex: 1; min-width: 80px; text-align: center; background: var(--light-bg); border-radius: 8px; padding: 16px 8px; }
+.stat-number { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
+
+/* ── Sponsor tiers ── */
+.sponsor-grid { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px; padding: 16px 0; }
+.sponsor-platinum .sponsor-logo { min-width: 220px; padding: 24px 32px; font-size: 1.1rem; border: 2px solid var(--primary); }
+.sponsor-gold .sponsor-logo { min-width: 180px; padding: 18px 24px; border: 2px solid var(--orange); }
+.sponsor-gold .sponsor-logo span { color: var(--orange); }
+.sponsor-silver .sponsor-logo { min-width: 140px; padding: 14px 20px; border: 1px solid #aaa; }
+.sponsor-silver .sponsor-logo span { color: #666; }
+.sponsor-supporting .sponsor-logo { min-width: 120px; padding: 10px 16px; font-size: 0.9rem; }
+
+/* ── Acknowledgement of Country ── */
+.acknowledgement-box { background: #f9f5f0; border-left: 4px solid var(--orange); padding: 20px 24px; border-radius: 0 8px 8px 0; }
+.acknowledgement-box h3 { color: var(--primary); margin-bottom: 10px; }
+.acknowledgement-box p { font-size: 0.88rem; color: #555; line-height: 1.7; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .themes-list { grid-template-columns: 1fr; }
+  .stat-grid { grid-template-columns: 1fr 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+  nav a { padding: 10px 10px; font-size: 0.82rem; }
+  .hero h1 { font-size: 1.6rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .program-table .prog-room { display: none; }
+  .time { width: 120px; }
+  .stats-row { gap: 10px; }
+}

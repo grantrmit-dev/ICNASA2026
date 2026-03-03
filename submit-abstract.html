@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit an Abstract – ICNASA 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <div class="page-header">
+    <h1>Submit an Abstract</h1>
+    <p>Abstract submission deadline: <strong>Monday, 1 September 2026</strong></p>
+  </div>
+
+  <main class="container">
+
+    <div class="section">
+      <h2>Submission Guidelines</h2>
+      <div class="info-box">
+        <ul>
+          <li>Abstracts must be submitted using the form below.</li>
+          <li>Abstract length: <strong>250–500 words</strong>.</li>
+          <li>Accepted formats: <strong>.doc, .docx, .pdf</strong>.</li>
+          <li>Presenting authors must register for the conference.</li>
+          <li>Each registered participant may present a maximum of <strong>2 abstracts</strong>.</li>
+          <li>All accepted abstracts will be included in the conference proceedings.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Abstract Submission Form</h2>
+      <form class="submit-form" onsubmit="handleSubmit(event)">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+61 4XX XXX XXX">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+              <option value="">Select...</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Non-binary / Third gender</option>
+              <option>Prefer not to say</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="company">Institution / Company *</label>
+            <input type="text" id="company" name="company" placeholder="University or organisation" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="researchField">Research Field / Theme *</label>
+            <select id="researchField" name="researchField" required>
+              <option value="">Select a theme...</option>
+              <option>Nanophotonics &amp; Optics</option>
+              <option>Advanced Sensing &amp; Detection</option>
+              <option>Nanofabrication &amp; Manufacturing</option>
+              <option>Quantum Technologies</option>
+              <option>Energy Harvesting &amp; Conversion</option>
+              <option>Biomedical Photonics</option>
+              <option>Artificial Intelligence &amp; Photonics</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="researchPosition">Research Position *</label>
+            <select id="researchPosition" name="researchPosition" required>
+              <option value="">Select...</option>
+              <option>Professor / Associate Professor</option>
+              <option>Senior Researcher / Research Fellow</option>
+              <option>Postdoctoral Researcher</option>
+              <option>PhD Student</option>
+              <option>Master Student</option>
+              <option>Undergraduate Student</option>
+              <option>Industry Professional</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="presentationType">Presentation Type *</label>
+            <select id="presentationType" name="presentationType" required>
+              <option value="">Select...</option>
+              <option>Oral Presentation</option>
+              <option>Poster Presentation</option>
+              <option>Either (author's preference)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="awardSelection">Award Consideration</label>
+            <select id="awardSelection" name="awardSelection">
+              <option value="">Select...</option>
+              <option>Best Student Paper Award</option>
+              <option>Best Poster Award</option>
+              <option>Not applicable</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="abstractTitle">Abstract Title *</label>
+          <input type="text" id="abstractTitle" name="abstractTitle" placeholder="Full title of your abstract" required>
+        </div>
+
+        <div class="form-group">
+          <label for="abstractText">Abstract Text *</label>
+          <textarea id="abstractText" name="abstractText" rows="8" placeholder="Paste your abstract text here (250–500 words)..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="abstractFile">Upload Abstract File (.doc / .docx / .pdf)</label>
+          <input type="file" id="abstractFile" name="abstractFile" accept=".doc,.docx,.pdf">
+        </div>
+
+        <div class="form-group" style="margin-top:10px;">
+          <label style="display:flex;align-items:flex-start;gap:10px;font-weight:normal;">
+            <input type="checkbox" required style="margin-top:4px;width:auto;">
+            <span>I confirm that the presenting author will register for the conference and that this abstract has not been previously published in full.</span>
+          </label>
+        </div>
+
+        <div style="text-align:center;margin-top:20px;">
+          <button type="submit" class="btn btn-accent" style="padding:14px 48px;font-size:1.05rem;">Submit Abstract</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="section">
+      <h2>Contact for Submissions</h2>
+      <p style="text-align:center;">For any submission enquiries please email <a href="mailto:icnasa@rmit.edu.au">icnasa@rmit.edu.au</a></p>
+    </div>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="nav.js"></script>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert('Thank you for your submission! We will be in touch shortly.');
+    }
+  </script>
+</body>
+</html>
